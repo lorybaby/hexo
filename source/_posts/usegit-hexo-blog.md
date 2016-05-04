@@ -120,5 +120,10 @@ hexo g -d
 git add.
 git commit -m "B news"
 git push origin master
+
+
+#git pull --rebase origin master 报错则
+git status
+git reset --hard 
 ``` 
 
