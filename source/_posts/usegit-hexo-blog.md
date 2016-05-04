@@ -110,9 +110,11 @@ git push -u origin master
 
 #B computer 换电脑都有重新配置hexo 部署环境 注意主题可能需要重新按 因为github pull下来是空文件 可能命令不规范导致
 git clone git@github.com:lorybaby/hexo.git
-cd hexo
+#最方便的办法 是直接用U盘把hexo 拷贝到其它电脑 前提是其它电脑已经配置好hexo
+cd blog
 npm install -g hexo-cli
 npm install hexo-deployer-git --save
+#最方便的办法 是直接用U盘把hexo 拷贝到其它电脑 前提是其它电脑已经配置好hexo 则hexo在blog目录下
 #如果不是第一次则
 git pull
 #写博客
