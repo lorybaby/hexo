@@ -1,7 +1,7 @@
 ---
 title: amber skills notices
 date: 2016-05-26 14:41:19
-tags: [amber,MD,sdg]
+tags: [amber,MD,sdg,bash]
 description: "amber MD"
 ---
 ## AMBER 会重给PDB编号

@@ -14,9 +14,10 @@ sdg--同源建模--predict structure
 ## 在晶体结构基础上修复N段缺失部分
 1.AB链对称，需要在AB的N两末端都加几个氨基酸，我的做法是AB链分别建模然后合并。----更简单是选择Multi-template model type: Homo-multimer
 这样同一目标序列（query sequnce on every template simultaneously)更具模板的空间坐标同时建模。
-2.同一条链由不同模板构成  同上Multi-template model type: Composite/Chimera 鼠标选择要选的序列。
+## 2.同一条链由不同模板构成
+  同上Multi-template model type: Composite/Chimera 鼠标选择要选的序列。
 其实完全可以用重建模的方式突变or添加AA，以原晶体结构为模板，将更改的原序列为目标序列建模。
-3.
+
 
 
 
