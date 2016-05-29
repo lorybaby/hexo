@@ -44,7 +44,8 @@ Theme **Yelee** 用黑体 relies on [Hexo-Theme-Yilia][1], thanks for the author
 “```”不指定语言模式 效果类似段落块
 ```
 
-`单独的字体加背景块` 用``    ![图片](https://github.com/lorybaby/lorybaby.github.io/tree/master/img/test.png)
+`单独的字体加背景块` 用``    ![图片](/images/test.png)
+***如果想搞清楚图片怎么***[插入,细节](http://ammonsonline.com/adding-images-to-a-hexo-post-via-markdown/)
 ``` yml 
 ``` yml bash python hightlight何种语言 
 [Hexo-Theme-Yilia][1]
