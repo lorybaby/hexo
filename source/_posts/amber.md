@@ -14,7 +14,7 @@ amber 和sdg联用可以确保启始构象达到最合理化，sdg  prep Wiz 可
 
 ##  AMBER 改in文件
 1.通常不同.in文件有同样的参数，比如同样的限制标记符号 ntr=1, restraintmask=':1-346', 需要改成 ':1-368'
-命令： sed -i "s/:1-346/:1-368/g" `grep :1-346 -rl ./in`
+> 命令： sed -i "s/:1-346/:1-368/g"  ``grep :1-346 -rl ./in``
 
 比如，要将目录in下面所有文件中的zhangsan都修改成lisi，向上那样
 替换：s命令  
@@ -31,3 +31,13 @@ FE2+  键联和非键联模式区别还是比较大的  非键联的 可能让HI
 
 多次能量最小化还是没成 可能结构有问题  pymol看了下都散架了，后来找到原因，其实构象的中小分子都是**虚原子导致**，
 tleap中把受体和配体分开来准备然和在combine.
+
+## amber pmemd.cuda.MPI 
+
+> mpirun -np 3 pmemd.cuda.MPI 
+***top 发现 本来应该是3cuda个线程  结果出现了6个*** 此时要果断kill 并重启工作站，否则amber 一直重运行覆盖同一 equ2.out
+
+![equ2.out](/images/2016/05/amber_mpiruncuda_preoblem.png)
+
+**注意NSTEP = 86000 到2492000 中间全是缺失值，直到3个小时后equ2.out计算出来运行时间，接着有马上算NSTEP = 87000再算到头**
+**相当于补全NULL,但也会重算覆盖2492000后面的，算完后又重新从0开始计算equ2.out 陷入了无限重复。**
